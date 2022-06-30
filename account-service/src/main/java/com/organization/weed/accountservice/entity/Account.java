@@ -1,11 +1,9 @@
 package com.organization.weed.accountservice.entity;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import javax.persistence.*;
 
 @Entity
-@Document
+@Table
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
