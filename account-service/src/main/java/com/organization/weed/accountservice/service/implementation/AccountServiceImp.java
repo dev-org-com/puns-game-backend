@@ -41,4 +41,13 @@ public class AccountServiceImp implements AccountService {
 
         accountRepository.save(AccountConverter.convertToAccount(request));
     }
+
+    @Override
+    public void deleteAccountById(Long id) throws NoAccountException {
+        if(!accountRepository.existsById(id)) {
+            throw new NoAccountException("Account with given id " + id + " does not exist!");
+        }
+
+        accountRepository.deleteById(id);
+    }
 }

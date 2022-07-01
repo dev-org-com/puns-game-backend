@@ -12,4 +12,5 @@ public interface AccountService {
     Account getAccountById(Long id) throws NoAccountException;
     List<Account> getAllAccounts();
     void save(SaveAccountRequest request) throws AccountAlreadyExistsException;
+    void deleteAccountById(Long id) throws NoAccountException;
 }

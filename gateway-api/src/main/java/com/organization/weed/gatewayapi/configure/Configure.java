@@ -12,7 +12,7 @@ public class Configure {
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("account-service", r -> r.path("/account-service/**")
-                        .uri("http://localhost:8000/account-service"))
+                        .uri("http://localhost:8000/account-service/"))
                         .build();
     }
 }
